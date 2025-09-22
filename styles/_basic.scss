@@ -21,6 +21,11 @@ li {
     list-style: none;
 }
 
+button {
+    border: none;
+    cursor: pointer;
+}
+
 
 body {
     font-family: "Roboto", sans-serif;
@@ -29,6 +34,7 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1460px;
     margin: 0 auto;
+    padding: 0 10px;
 }
