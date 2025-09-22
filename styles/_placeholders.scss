@@ -3,8 +3,14 @@
 
 %hover-black {
   &:hover {
-    cursor: pointer;
     color: v.$color_black;
+  }
+}
+
+
+%hover-white {
+  &:hover {
+    color: v.$color_white;
   }
 }
 
