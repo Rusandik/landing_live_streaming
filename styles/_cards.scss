@@ -3,103 +3,143 @@
 @use "placeholders";
 @use "sass:color";
 
-
 .info-card {
-    width: 180px;
-    height: 205px;
-    padding: 20px 10px 0;
-    text-align: center;
-    border-radius: 20px;
-    cursor: pointer;
-    background-color: color.adjust(v.$color_white, $alpha: -0.85);
-    @include m.d-flex (start, center, nowrap, column, 0, 10px);
+  width: 180px;
+  height: 205px;
+  padding: 20px 10px 0;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: color.adjust(v.$color_white, $alpha: -0.85);
+  @include m.d-flex(start, center, nowrap, column, 0, 10px);
 
-    &__icon {
-        width: 30px;
-        height: 30px;
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  &__title {
+    @include m.font(18px, 500, v.$color_black);
+  }
+
+  &__desc {
+    @include m.font(16px, 300, v.$color_black);
+  }
+
+  &:hover {
+    background-color: color.adjust(v.$color_white, $alpha: -0.95);
+
+    .info-card__title,
+    .info-card__desc {
+      color: v.$color_white;
     }
+  }
+
+  @media (max-width: v.$media_min) {
+    width: 140px;
+    height: 170px;
 
     &__title {
-        @include m.font(18px, 500, v.$color_black);
+      @include m.font(14px, 400, v.$color_black);
     }
 
     &__desc {
-        @include m.font(16px, 300, v.$color_black);
+      @include m.font(11px, 300, v.$color_black);
     }
-
-    &:hover {
-        background-color: color.adjust(v.$color_white, $alpha: -0.95);
-
-        .info-card__title,
-        .info-card__desc {
-            color: v.$color_white;
-        }
-    }
-        
-    @media (max-width: v.$media_min) {
-        width: 140px;
-        height: 170px;
-
-        &__title {
-           @include m.font(14px, 400, v.$color_black);
-        }
-
-        &__desc {
-            @include m.font(11px, 300, v.$color_black);
-        }
-    }
+  }
 }
 
-
-
 .img-card {
-    width: 325px;
-    height: 295px;
-    position: relative;
+  width: 325px;
+  height: 295px;
+  position: relative;
+  border-radius: 20px;
+  background-color: color.adjust(v.$color_white, $alpha: -0.85);
+  @include m.d-flex(space-between, center, nowrap, column, 0, 0);
+  overflow: hidden;
+  flex-shrink: 0;
+
+  &__title {
+    @include m.font(23px, 400, v.$color_white);
+    @include m.d-flex(center, center, nowrap, column, 0, 0);
+    flex: 1;
+  }
+
+  &__preview {
+    width: 100%;
+    height: 220px;
+  }
+
+  &__btn {
+    width: 120px;
+    height: 90px;
     border-radius: 20px;
-    background-color: color.adjust(v.$color_white, $alpha: -0.85);
-    @include m.d-flex(space-between, center, nowrap, column,0, 0);
-    overflow: hidden;
-    flex-shrink: 0;
+    border: none;
+    background-color: v.$color_white;
+    rotate: z 8deg;
+    transition: rotate 0.2s;
+    @include m.position(absolute, 1, -1, bottom, left, -20px, -30px);
 
-
-    &__title {
-        @include m.font(23px, 400, v.$color_white);
-        @include m.d-flex(center, center, nowrap, column,0, 0);
-        flex: 1;
-    }
-
-    &__preview {
-        width: 100%;
-        height: 220px;
-    }
-
-    &__btn {
-        width: 120px;
-        height: 90px;
-        border-radius: 20px;
-        border: none;
-        background-color: v.$color_white;
-        rotate: z 8deg;
-        transition: rotate .2s;
-        @include m.position(absolute, 1, -1, bottom, left, -20px, -30px);
-
-        &-icon {
-            width: 36px;
-            height: 23px;
-            rotate: z -8deg;
-            translate: 12px -10px;
-        }
-
-        &:hover {
-            cursor: pointer;
-            rotate: z 8deg;
-            scale: 1.3;
-        }
+    &-icon {
+      width: 36px;
+      height: 23px;
+      rotate: z -8deg;
+      translate: 12px -10px;
     }
 
     &:hover {
-        cursor: pointer;
-        box-shadow: 0 8px 20px 12px rgba(0, 0, 0, .15),  inset 0, -5px, 70px 25px rgba(0, 0, 0, .2);
+      cursor: pointer;
+      rotate: z 8deg;
+      scale: 1.3;
     }
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 20px 12px rgba(0, 0, 0, 0.15), inset 0, -5px,
+      70px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.wave-card {
+  max-width: 500px;
+  height: 275px;
+  background: url(../assets/wave_card_bg.svg) center/contain no-repeat;
+  @include m.d-flex(center, start, nowrap, column, 0, 35px);
+
+  &__avatar {
+    padding:0 0 0 18px;
+
+  }
+
+  &__quote {
+    @include m.font(20px, 400, v.$color_white);
+    line-height: 26px;
+    padding: 0 40px;
+  }
+
+
+  @media (max-width: v.$media_sm) {
+    max-width: 400px;
+
+    &__quote {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  @media (max-width: v.$media_min) {
+    max-width: 320px;
+    height: 175px;
+    column-gap: 20px;
+
+    &__avatar {
+        width: 50px;
+    }
+
+    &__quote {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
 }
