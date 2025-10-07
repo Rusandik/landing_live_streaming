@@ -1,12 +1,10 @@
 {
   "name": "live_streaming",
   "version": "1.0.0",
-  "description": "landing page",
+  "description": "live_streaming",
   "source": "index.html",
   "scripts": {
-    "sass:watch": "sass --style=expanded --watch styles:dist",
-    "parcel:watch": "parcel serve --dist-dir public",
-    "parcel:build": "parcel build --dist-dir build --public-url ./"
+    "sass:watch": "sass --style=compressed --watch styles:dist"
   },
   "repository": {
     "type": "git",
