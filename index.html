@@ -210,49 +210,65 @@
     </section>
 
     <section class="testimonials-section" aria-label="testimonials section" id="testimonials">
-            <div class="container">
-                <div class="testimonials">
-                    <h2 class="testimonials__title">
-                        Testimonials
-                    </h2>
+      <div class="container">
+        <div class="testimonials">
+          <h2 class="testimonials__title">
+            Testimonials
+          </h2>
 
-                    <div class="testimonials__slider slider">
-                        <figure class="wave-card">
-                            <img src="assets/img/avatar_alpha.png" alt="" class="wave-card__avatar">
+          <div class="testimonials__slider slider">
+            <figure class="wave-card">
+              <img src="assets/img/avatar_alpha.png" alt="" class="wave-card__avatar">
 
-                            <blockquote class="wave-card__quote" cite="https://happyclient.com">
-                                <p>
-                                    Очень хороший отзыв, который оставил довольный клиент. А тут я ещё не придумал что
-                                    написать, поэтому просто добавил это предложение.
-                                </p>
-                            </blockquote>
-                        </figure>
+              <blockquote class="wave-card__quote" cite="https://happyclient.com">
+                <p>
+                  Очень хороший отзыв, который оставил довольный клиент. А тут я ещё не придумал что
+                  написать, поэтому просто добавил это предложение.
+                </p>
+              </blockquote>
+            </figure>
 
-                        <button class="slider__left-btn">
-                            <svg class="slider__left-btn-icon" aria-label="arrow icon">
-                                <use href="assets/sprites.svg#arrow-icon"></use>
-                            </svg>
-                        </button>
+            <button class="slider__left-btn">
+              <svg class="slider__left-btn-icon" aria-label="arrow icon">
+                <use href="assets/sprites.svg#arrow-icon"></use>
+              </svg>
+            </button>
 
-                        <button class="slider__right-btn">
-                            <svg class="slider__right-btn-icon" aria-label="arrow icon">
-                                <use href="assets/sprites.svg#arrow-icon"></use>
-                            </svg>
-                        </button>
+            <button class="slider__right-btn">
+              <svg class="slider__right-btn-icon" aria-label="arrow icon">
+                <use href="assets/sprites.svg#arrow-icon"></use>
+              </svg>
+            </button>
 
-                        <div class="slider__points">
-                            <div class="slider__points-item"></div>
-                            <div class="slider__points-item"></div>
-                            <div class="slider__points-item"></div>
-                            <div class="slider__points-item"></div>
-                            <div class="slider__points-item"></div>
-                            <div class="slider__points-item"></div>
-                        </div>
-                    </div>
-                </div>
+            <div class="slider__points">
+              <div class="slider__points-item"></div>
+              <div class="slider__points-item"></div>
+              <div class="slider__points-item"></div>
+              <div class="slider__points-item"></div>
+              <div class="slider__points-item"></div>
+              <div class="slider__points-item"></div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="form-section">
+      <div class="container">
+        <div class="form-section__wrapper">
+          <form class="form" action="#">
+            <label for="input-name" class="form__title">Ready to get started? Drop us a line!</label>
+            <input type="text" id="input-name" class="form__name" placeholder="Name" aria-required="true" required>
+            <input type="email" class="form__email" placeholder="Email" aria-required="true" required>
+            <input type="text" class="form__text" placeholder="What we can do for you?" aria-required="true" required>
+            <button type="submit" class="form__submit-btn">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="form-section__bg-cloud cloud--left"></div>
+      <div class="form-section__bg-cloud cloud--right"></div>
+    </section>
 </body>
 
 </html>
