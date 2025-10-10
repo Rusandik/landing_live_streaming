@@ -4,7 +4,8 @@
   "description": "live_streaming",
   "source": "index.html",
   "scripts": {
-    "sass:watch": "sass --style=expanded --watch styles:dist"
+    "sass:watch": "sass --style=expanded --watch styles:dist",
+    "parcel:build": "parcel build --dist-dir build --public-url ./"
   },
   "repository": {
     "type": "git",
